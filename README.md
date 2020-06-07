@@ -76,3 +76,5 @@ In some sort of v2 or v3 of our game where we add complexity we might start worr
 # Closing Thoughts
 
 ily guys <3
+
+![haha alt text OKAY](https://media.giphy.com/media/5kq0GCjHA8Rwc/giphy.gif)
