@@ -4,7 +4,7 @@
 
 It's very important that we're all using the same version of Unity,
 and this is the one that we'll be sticking to for the project. If a new version comes out and there's
-a reason to ugprade we can, but once we've leapt forward, there's no going back.
+a reason to upgrade we can, but once we've leapt forward, there's no going back.
 
 Luckily, Unity Hub makes it super easy to manage different versions of Unity. If you already have a different
 version installed, you can go to the `Installs` tab, click `Add`, and select the version indicated above. After
