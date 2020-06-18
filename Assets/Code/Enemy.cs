@@ -4,8 +4,16 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
+  private WaveManager waveManager;
+
   public GameObject alive;
   public GameObject dead;
+
+  void Awake()
+  {
+    GameObject waveManagerObject = GameObject.Find("WaveManager");
+    this.waveManager = (WaveManager)waveManagerObject.GetComponent(typeof(WaveManager));
+  }
 
   void OnMouseDown()
   {
@@ -20,11 +28,11 @@ public class Enemy : MonoBehaviour
     StartCoroutine("Die");
   }
 
-  IEnumerator Die()
+  private IEnumerator Die()
   {
     for (float ft = 1f; ft >= 0; ft -= 0.1f)
     {
-      var renderers = this.dead.GetComponentsInChildren<Renderer>();
+      Renderer[] renderers = this.dead.GetComponentsInChildren<Renderer>();
 
       foreach (Renderer r in renderers)
       {
@@ -37,6 +45,7 @@ public class Enemy : MonoBehaviour
     }
 
     Destroy(this.gameObject);
+    this.waveManager.enemyKilled(this.gameObject);
 
     yield return null;
   }
